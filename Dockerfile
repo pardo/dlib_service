@@ -13,10 +13,11 @@ RUN bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
 
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
-RUN pip install -r requirements.txt
 
 COPY requirements.txt /
 COPY faces.py /
+
+RUN pip install -r requirements.txt
 
 EXPOSE 8080
 
